@@ -1,0 +1,106 @@
+.Direita * {
+    font-size:0.8rem;
+    color: gray;
+}
+
+.Direita ul {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+.topPerfil, .userPerfil, .profSuggest span {
+    display: flex;
+    width: 100%;
+}
+
+.topPerfil img, .profSuggest img {
+    height: 3rem;
+    border-radius: 100vw;
+}
+
+.topPerfil p:not(.userPerfil p), .follow {
+    margin-block: auto;
+    color: rgb(29, 59, 151);
+}
+
+.profSuggest p:first-child, .userPerfil p:first-child {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+}
+
+.profSuggest span, .userPerfil {
+    gap: 0.7rem;
+}
+
+.suggestPefil, .profSuggest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.suggestPefil {
+    margin: 2.5vh 0;
+}
+
+.suggestPefil p:first-child {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.suggestPefil p:last-child {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 5vh;
+    padding-right: 2vw;
+    column-gap: 0.5rem;
+}
+
+.footer a, .footer div {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+}
+
+.footer div {
+    margin-top: 2vh;
+}
+
+.arrowSelect {
+    width: 10rem;
+}
+
+/* Hover */
+
+.Direita img:hover {
+    cursor: pointer;
+}
+
+.profSuggest p:first-child, .userPerfil p:first-child {
+    cursor: pointer;
+}
+
+.topPerfil p:not(.userPerfil p):hover, .follow:hover {
+    color: white;
+    cursor: pointer;
+    /* & .arrowSelect {
+        display: flex;
+    } */
+}
+
+.suggestPefil p:last-child:hover {
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+}
+
+.footer a:hover {
+    text-decoration-line: underline;
+    cursor: pointer;
+}

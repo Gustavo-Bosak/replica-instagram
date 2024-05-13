@@ -1,0 +1,118 @@
+.Post {
+    width: 460px;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+    margin-bottom: 3vh;
+}
+
+.card-header, .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header img {
+    width: 2rem;
+    border: black solid 3px;
+    border-radius: 100vw;
+}
+
+.card-header div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.card-header div div {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(78, 149, 217, 1) 10%, rgba(35, 83, 161, 1) 57%, rgba(11, 48, 65, 1) 98%);
+    padding: 2.5px;
+    border-radius: 100vw;
+}
+
+.card-header * {
+    cursor: pointer;
+}
+
+.card-top {
+    margin-block: 1vh;
+    font-size: 1.5rem;
+}
+
+.card-top span:first-child *:nth-child(2) {
+    margin-inline: 1rem;
+    font-size: 1.6rem;
+}
+
+.card-body {
+    font-size: 0.9rem;
+}
+
+.card-body img, .card-body video {
+   width: 100%;
+   border-radius: 6px;
+   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+   margin-top: 1vh;
+}
+
+.card-body div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body p span, .card-header span {
+    font-weight: 500;
+    color: gray;
+    cursor: pointer;
+}
+
+.card-body p:nth-child(4) {
+    margin-block: 1vh;
+}
+
+.card-body p:nth-child(5) {
+    color: gray;
+}
+
+.card-bottom {
+    margin: 0 0 1.5vh 0;
+    color: gray;
+}
+
+.card-bottom i {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+form {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    outline: none;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: gray;
+}
+
+/* Hover */
+
+.card-bottom i:hover {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.card-top span *:hover{
+    color: gray;
+}

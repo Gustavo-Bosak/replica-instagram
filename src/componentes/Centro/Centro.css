@@ -1,0 +1,67 @@
+.Centro, .endFeed {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5vh 0;
+  gap: 1rem;
+}
+
+.Story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.1rem;
+}
+
+.Story img {
+  width: 100%;
+  border: #000000 solid 3px;
+  border-radius: 100vw;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(78, 149, 217, 1) 10%, rgba(35, 83, 161, 1) 57%, rgba(11, 48, 65, 1) 98%);
+  padding: 2px;
+  border-radius: 100vw;
+}
+
+.atnameUser p {
+  width: 7rem;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.endFeed {
+  padding-block: 8vh;
+}
+
+.endFeed img {
+  width: 10rem;
+  margin-bottom: 1.5vh;
+}
+
+.endFeed p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.endFeed p:nth-child(2) {
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* Hover */
+
+.Story:hover {
+  cursor: pointer;
+}
