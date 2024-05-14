@@ -1,11 +1,17 @@
 import './Post.css';
+import { useState } from 'react';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from 'react-icons/fa';
 import { PiChatCircleBold } from 'react-icons/pi';
 import { LuSend } from 'react-icons/lu';
-import { RiBookmarkLine } from "react-icons/ri";
+import { RiBookmarkFill, RiBookmarkLine } from "react-icons/ri";
+import { RiBookMarkFill } from 'react-icons/ri';
 
 export default function Post(props) {
+    const [likes, setLikes] = useState(true);
+    const [favorited, setFavorited] = useState(true)
+
     return (
         <div className="card Post">
             <div className="card-header">
@@ -21,12 +27,14 @@ export default function Post(props) {
                 <img src={props.imagePost}/>
                 <div className="card-top">
                     <span>
-                        <FaRegHeart />
+                        {likes ? <FaRegHeart onClick={() => {setLikes(!likes)}}/> :
+                            <FaHeart onClick={() => {setLikes(!likes)}}style={{color: 'white'}}/>}
                         <PiChatCircleBold />
                         <LuSend/>
                     </span>
                     <span>
-                        <RiBookmarkLine />
+                        {favorited ? <RiBookmarkLine onClick={() => {setFavorited(!favorited)}}/> :
+                            <RiBookmarkFill onClick={() => {setFavorited(!favorited)}}style={{color: 'white'}}/>}
                     </span>
                 </div>
                 <p>Curtido por <strong style={{cursor: 'pointer'}}>{props.whoLike}</strong> e <strong style={{cursor: 'pointer'}}>outras pessoas</strong></p>
@@ -42,30 +50,3 @@ export default function Post(props) {
         </div>
     )
 }
-
-// import { useState } from "react";
-// import './Post.css';
-// import like from '../../../imagens/border_cf.png';
-// import likeFull from '../../../imagens/icon.png';
-// import { FaRegGrinHearts} from "react-icons/fa";
-// import { AiOutlineMessage } from "react-icons/ai";
-
-// export default function Post(props) {
-//     return (
-//         <div className="card Post">
-//             <div className="card-header">
-//                 <p>{props.title}</p>
-//             </div>
-//             <div className="card-body">
-//                 <img src={props.imagePost}/>                
-//                 <img src={like} style={{width: '3rem'}}/>
-//                 <AiOutlineMessage />
-//                 <p>{props.body}</p>
-//             </div>
-//             <div className="card-footer">
-//             </div>
-//         </div>
-//     )
-// }
-
-// style={{color: likes % 2 === 0 ? 'black' : 'red', cursor: 'pointer', animation: 'ease-in', transition: '0.5s'}}
